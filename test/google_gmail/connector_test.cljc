@@ -105,6 +105,6 @@
       (is (= (decl/declaration c/provider
                                {:namespace "google-gmail.connector"
                                 :var "provider"
-                                :authority "90-docs/adr/2608094000-connector-plane-one-repo-per-connector.edn"})
+                                :authority "90-docs/adr/2608097000-connector-plane-one-repo-per-connector.edn"})
              committed)
           "run: nbb --classpath \"src:../connector/src\" emit-connector-edn.cljs"))))
