@@ -13,7 +13,7 @@
   here needs more than that.
 
   Nothing here can obtain a credential; `connector.invoke` attaches it."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [connector.model :as m]
             [connector.provider :as p]
             [connector.uri :as uri]))
@@ -152,7 +152,7 @@
   search every time. Lower-cased keys because header names are case-insensitive
   and Gmail does not normalize them."
   [message]
-  (into {} (map (fn [h] [(some-> (get h "name") str/lower-case) (get h "value")]))
+  (into {} (map (fn [h] [(some-> (get h "name") str/lower) (get h "value")]))
         (get-in message ["payload" "headers"] [])))
 
 (defn- message-row [message]
