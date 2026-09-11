@@ -68,13 +68,13 @@ several rather than silently sending the first.
 `connector.edn` is generated; the test suite fails if it has drifted.
 
 ```sh
-nbb --classpath "src:../connector/src" emit-connector-edn.cljs
+nbb --classpath "src:../connector/src" emit-connector-edn.cljk
 ```
 
 ## Tests
 
 ```sh
-nbb --classpath "src:test:../connector/src" run-tests.cljs   # 11 tests, 43 assertions
+nbb --classpath "src:test:../connector/src" run-tests.cljk   # 11 tests, 43 assertions
 clojure -M:test
 ```
 
